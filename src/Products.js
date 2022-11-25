@@ -5,6 +5,7 @@ import Loader from "./Loader.js";
 
 export default function Products(props) {
   const [products, setProducts] = useState([]);
+  const qqq = ''
   const { get, loading } = useFetch(
     "https://react-tutorial-demo.firebaseio.com/"
   );
@@ -15,7 +16,7 @@ export default function Products(props) {
         setProducts(data);
       })
       .catch((error) => console.log("Could not load products", error));
-  }, []);
+  }, [qqq]);
 
   return (
     <div className="products-layout">
